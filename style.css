@@ -121,20 +121,63 @@ label {cursor: pointer;
     transition: 0.3s;
     text-align: center;
     font-size: 1.1rem;
-    color: var(--color3);
     min-width: 150px;
     width: 35%;
     max-width: 300px;
     border: 3px solid transparent;
+    
 }
 input[type="text"]:focus {
-    color:color: var(--color2) ;
+    color: var(--color1) ;
     background: transparent;
     border: 3px solid rgb(217, 220, 247);
     border-radius: 150px;
     filter: drop-shadow(6px 6px 10px var(--color2))
 }
 input[type="text"]::placeholder {
-    color:color: var(--color1) ;
+    color: var(--color3) ;
 }
-
+button {
+    display: block;
+    cursor: pointer;
+    background: linear-gradient(226deg, var(--color2) 0%, #020024c2);
+    filter: drop-shadow(-6px 6px 5px var(--color2));    
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 150px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    user-select: none;
+}
+button:hover{
+    filter: drop-shadow(6px -6px 5px var(--color2));
+    background: linear-gradient(45deg, var(--color2) 0%, #020024c2);
+}
+button:active {
+    transform: scale(1.20);
+    letter-spacing: 3px;
+    font-weight: bolder;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0px 0px var(--color2));
+    color: var(--color3);
+    background: radial-gradient(ellipse farthest-corner at center center, #95cada 0%, #ffffff 100%);
+    box-shadow: -1px -2px 200px 30px rgba(255,255,255,0.75);   
+}
+button:hover + a,a:hover {
+    opacity:1;
+    transform: translateY(0);
+    font-weight: bolder;
+}
+a {
+    color:var(--color2);
+    text-align: center;
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+a:visited {
+    color: var(--color4);
+    
+}
