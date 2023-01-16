@@ -38,7 +38,23 @@ body {
     font-size: 2.5rem;
     }
 h1 {
+    position:relative ;
   margin-bottom: 24px;  
+}
+h1::after {
+    content: "";
+    position: absolute;
+    background: var(--color2);
+    height: 3px;
+    width: 100%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    animation: h1anim 5s ease-in-out forwards;
+}
+@keyframes h1anim {
+    to { transform: translateX(-50%) scale(1);
+    }
 }
 .grid-container {
     display: grid;
