@@ -1,0 +1,137 @@
+:root {
+--color1: #ede4d0;
+--color2: #00d4ff;
+--color3: #095179;
+--color4: #020024;
+;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./img/bg1.jpg) center/cover;
+    height: 100vh;
+    font-family: "Segoe UI", Tahoma, geneva, Verdana, sans-serif;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card { 
+    background: rgba(2, 0, 36, 0.18);
+    width: calc(100% - 50px);
+    padding: 20px 20px 6px;
+    box-shadow: -5px 5px 16px 0px rgba(0, 0, 0, 0.527);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+       
+}
+.card::before {
+    content: "\2730";
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 2.4rem;
+    }
+h1 {
+  margin-bottom: 24px;  
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    
+}
+.polygon-container {
+    
+    filter: drop-shadow(-1px 6px 3px var(--color2));
+    /* Mettre le parent en grid */
+    place-self: center left;
+  }
+  .polygon {
+     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* border-radius:0% 100% 0% 100% / 23% 75% 25% 77%  ; */
+    background: linear-gradient(135deg, var(--color2) 0%, var(--color1) 100%);
+    height: 100px;
+    width: 100px;
+  }
+.polygon:after {
+    content: "Youri";
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    /* text-justify: auto; */
+    position: absolute;
+    color: var(--color1);
+    background: #46444cb0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(341deg);
+    width: 150px;
+    padding: 4px;
+    text-align: center;
+    /* text-size-adjust: auto; */
+}
+p {
+    line-height: 26px;
+    margin: 20px 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+p::selection {
+    background:var(--color2);
+    color: var(--color3);
+}
+.checkbox-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 30px;
+
+}
+input[type="checkbox"] {
+    display: none;
+}
+    
+input[type="checkbox"]:checked + label {
+    background: var(--color2);
+    color: var(--color3);
+
+    
+}
+label {cursor: pointer;
+    border: 1px solid var(--color1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+    user-select: none;
+}
+.e-mail {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.e-mail input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color1);
+    min-width: 150px;
+    width: 35%;
+    max-width: 300px;
+    border: 3px solid transparent;
+}
+input[type="text"]:focus {
+    background: transparent;
+    border: 3px solid rgb(217, 220, 247);
+    border-radius: 150px;
+}
+input[type="text"]::placeholder {
+    color: ;
+}
+
