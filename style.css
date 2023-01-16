@@ -33,9 +33,9 @@ body {
 .card::before {
     content: "\2730";
     position: absolute;
-    top: 14px;
+    top: 15px;
     right: 20px;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     }
 h1 {
   margin-bottom: 24px;  
@@ -47,16 +47,15 @@ h1 {
 }
 .polygon-container {
     
-    filter: drop-shadow(-1px 6px 3px var(--color2));
+    filter: drop-shadow(6px 6px 10px var(--color2));
     /* Mettre le parent en grid */
-    place-self: center left;
+    place-self: center;
   }
   .polygon {
      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    /* border-radius:0% 100% 0% 100% / 23% 75% 25% 77%  ; */
-    background: linear-gradient(135deg, var(--color2) 0%, var(--color1) 100%);
-    height: 100px;
-    width: 100px;
+    background: linear-gradient(226deg, var(--color2) 0%, #020024c2);
+    height: 150px;
+    width: 150px;
   }
 .polygon:after {
     content: "Youri";
@@ -68,7 +67,7 @@ h1 {
     background: #46444cb0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(341deg);
+    transform: translate(-50%, -50%) rotate(345deg);
     width: 150px;
     padding: 4px;
     text-align: center;
@@ -76,7 +75,7 @@ h1 {
 }
 p {
     line-height: 26px;
-    margin: 20px 20px;
+    margin: 20px 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
@@ -100,6 +99,7 @@ input[type="checkbox"]:checked + label {
     background: var(--color2);
     color: var(--color3);
 
+
     
 }
 label {cursor: pointer;
@@ -114,24 +114,27 @@ label {cursor: pointer;
     margin-bottom: 20px;
 }
 .e-mail input {
+    cursor: pointer;
     padding: 10px;
     border-radius: 5px;
     outline: none;
     transition: 0.3s;
     text-align: center;
     font-size: 1.1rem;
-    color: var(--color1);
+    color: var(--color3);
     min-width: 150px;
     width: 35%;
     max-width: 300px;
     border: 3px solid transparent;
 }
 input[type="text"]:focus {
+    color:color: var(--color2) ;
     background: transparent;
     border: 3px solid rgb(217, 220, 247);
     border-radius: 150px;
+    filter: drop-shadow(6px 6px 10px var(--color2))
 }
 input[type="text"]::placeholder {
-    color: ;
+    color:color: var(--color1) ;
 }
 
